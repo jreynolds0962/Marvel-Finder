@@ -21,3 +21,5 @@ As stated earlier, I plan to use Azure DevOps platform to build and test the app
 * What information is presented in the API call and how should i parse it?
 
 * How to display the character image and stats in the GUI?
+
+* How do I iterate over the API response and display each power stat on the GUI.

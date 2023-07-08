@@ -4,13 +4,13 @@ from heroList import hero_list
 
 
 def get_power_stats(character):
+    # lowercase full list of characters in list
+    lowered = [x.lower() for x in hero_list]
     
-    if character in hero_list:
+    if character.lower() in lowered:
         base_url = "https://superheroapi.com/api/"
         key = cped.TOKEN
-
-        # lowercase full list of characters in list
-        lowered = [x.lower() for x in hero_list]
+        
         id = lowered.index(character.lower()) + 1
 
         # for char in lowered:
@@ -28,3 +28,5 @@ def get_power_stats(character):
             return "Warning: API error"
     else:
         return "Warning: Could not find character in character list. Please input a different character name."
+
+

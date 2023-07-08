@@ -1,5 +1,6 @@
 import tkinter as tk
 import superheros
+from PIL import ImageTk, Image
 
 def print_char_name():
     name = character.get()
@@ -8,7 +9,27 @@ def print_char_name():
 def display_char_stats():
     name = character.get()
     stats = superheros.get_power_stats(name)
-    name_label.configure(text=f"{name} Stats: {stats}")
+    print(stats)  # Print the value of stats to verify its type
+    
+    i = 0
+    
+    image_path = f"./character_images/{name}.jpg"
+    character_image = Image.open(image_path)
+    character_image = character_image.resize((200, 200))
+    character_photo = ImageTk.PhotoImage(character_image)
+    character_image_label.configure(image=character_photo)
+    character_image_label.image = character_photo
+    
+    for key, value in stats.items():
+        key_label = tk.Label(stats_frame, text=key+":")
+        key_label.grid(row=i, column=0, sticky='e')
+        
+        value_label = tk.Label(stats_frame, text=value)
+        value_label.grid(row=i, column=1, sticky='w')
+        
+        i += 1
+
+
 
 
 
@@ -37,8 +58,17 @@ character.pack()
 show_name_button = tk.Button(window, text=" Display Character Stats", command=display_char_stats)
 show_name_button.pack()
 
-name_label = tk.Label(window, text="Character Stats: ")
-name_label.pack()
+main_frame = tk.Frame(window)
+main_frame.pack()
 
+
+image_frame = tk.Frame(main_frame)
+image_frame.pack(side="left", padx=10)
+
+character_image_label = tk.Label(image_frame)
+character_image_label.pack
+
+stats_frame = tk.Frame(main_frame)
+stats_frame.pack(side="left", padx=10)
 
 window.mainloop()
