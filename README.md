@@ -2,7 +2,7 @@
 
 ## Preparation
 
-# Questions
+# Questions:
 
 * How can I get information about a specific character?
 
