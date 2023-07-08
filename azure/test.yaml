@@ -6,7 +6,7 @@ pool: TestPool
 steps:
 
 - task: AzureKeyVault@2
-  displayName: Get Secrets from Key Vault
+  displayName: Get Secrets from Key Vaults
   inputs:
     azureSubscription: SC-RG-001
     KeyVaultName: "API-keys001"
