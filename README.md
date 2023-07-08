@@ -8,7 +8,7 @@ I hope to gain insight on best practices when it comes to using APIs; like secur
 
 The use of the GUI will be new to me. I have not had any projects that use GUIs, so I believe learning and understanding how the front-end interacts with the back-end will also help me in getting a deeper knowledge of how more robust applications operate.
 
-As stated earlier, I plan to use Azure DevOps platform to build and test the application to have some automation involved.
+As stated earlier, I plan to use Azure DevOps platform to build and test the application to have some automation involved. I will also utlize Azure KeyVault to store sensitive data and access that data through ADO to be able to connect to the API.
 
 ## Preparation
 
