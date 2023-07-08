@@ -24,4 +24,3 @@ def get_power_stats(character):
     else:
         print("An error has occured: " + str(response.status_code))
         
-print(get_power_stats("Nebula"))
