@@ -2,27 +2,34 @@ import tkinter as tk
 import superheros
 from PIL import ImageTk, Image
 
+# testing getting character entry
 def print_char_name():
     name = character.get()
     print(name)
 
 def display_char_stats():
+    
     name = character.get()
     stats = superheros.get_power_stats(name)
     
+    # counter for row number for stats
     i = 0
+    
+    # try/except block for retreiving image of character input
     try:
         image_path = f"./character_images/{name}.jpg"
         character_image = Image.open(image_path)
     except:
         image_path = "./character_images/no-image.jpg"
         character_image = Image.open(image_path)
-        
+    
+    # insert image into image frame
     character_image = character_image.resize((200, 200))
     character_photo = ImageTk.PhotoImage(character_image)
     character_image_label.configure(image=character_photo)
     character_image_label.image = character_photo
     
+    # iterate through stats to display on screen
     for key, value in stats.items():
         if key == "response" or key == "id":
             continue
