@@ -9,18 +9,23 @@ def print_char_name():
 def display_char_stats():
     name = character.get()
     stats = superheros.get_power_stats(name)
-    print(stats)  # Print the value of stats to verify its type
     
     i = 0
-    
-    image_path = f"./character_images/{name}.jpg"
-    character_image = Image.open(image_path)
+    try:
+        image_path = f"./character_images/{name}.jpg"
+        character_image = Image.open(image_path)
+    except:
+        image_path = "./character_images/no-image.jpg"
+        character_image = Image.open(image_path)
+        
     character_image = character_image.resize((200, 200))
     character_photo = ImageTk.PhotoImage(character_image)
     character_image_label.configure(image=character_photo)
     character_image_label.image = character_photo
     
     for key, value in stats.items():
+        if key == "response" or key == "id":
+            continue
         key_label = tk.Label(stats_frame, text=key+":")
         key_label.grid(row=i, column=0, sticky='e')
         
@@ -43,7 +48,7 @@ window.configure()
 
 
 
-greeting = tk.Label(window, text="Welcome to the Power Profiler", font=('Times 24'), width=60)
+greeting = tk.Label(window, text="Welcome to the Power Profiler", font=('Tekton Pro', 24, "bold"), width=60)
 greeting.pack()
 
 ask = tk.Label(window, text="Please type in a character name to get their Power Profile: ")
@@ -66,7 +71,7 @@ image_frame = tk.Frame(main_frame)
 image_frame.pack(side="left", padx=10)
 
 character_image_label = tk.Label(image_frame)
-character_image_label.pack
+character_image_label.pack()
 
 stats_frame = tk.Frame(main_frame)
 stats_frame.pack(side="left", padx=10)
