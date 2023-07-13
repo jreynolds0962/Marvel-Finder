@@ -65,7 +65,19 @@ As stated earlier, I plan to use Azure DevOps platform to build and test the app
 
 # The GUI
 
-The application now has a GUI icorporated. Directions on how to use are listed at the top. i enjoyed this project and using the GUI. This was my first time having a project with an interface. It presented some challenges such as:
+The application now has a GUI icorporated. Directions on how to use are listed at the top.
+
+The gui file first imports the necessary libraries. There is a print_char_name function, that was me testing the retrieval of the entry from the entry box and printing it in the console. 
+
+The next function you see is "display_char_stats", this is where the magic occurs. We first get the name that is input in the entry box. That name is then passed to the "get_power_stats" from the superhero file, in a variable named stats.
+
+We have a try/except block that sees if there is an image in our database that relates to the name input into the message box, if there is we will store that image to "character_image" if not use the default image. Then we resize and configure the image into the character_image_label variable that is mentioned later in the program.
+
+After we take the data from stats, and iterate through it so that a new line item is created for each power stat. We do this rather than setting a finite variable for the amount of powerstats in case one hero has more stats than another.
+
+The rest of the file is the configuration of the window and its contents.
+
+I enjoyed this project and using the GUI. This was my first time having a project with an interface. It presented some challenges such as:
 
 * incorporating the api script into the gui file and adding logic to add the data from the response to the gui
 
