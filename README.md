@@ -1,5 +1,39 @@
 # PowerProfiler
 
+## How to run the application:
+
+### inital steps
+
+1. Clone the repository to your local computer
+
+2. create an account with "https://superheroapi.com"
+
+3. Once done, you should receive an API key.
+
+4. Add your api key to the script (you can do this by either):
+    - creating a cped.py file in the main directory and adding you key to a variable called TOKEN
+    - or, insert your token directly into the variable called "key" in the "get_power_stats" function
+
+### GUI
+
+If you want to run your program within the gui, you will have to run the gui.py file on your local machine.
+
+1. run this on your terminal
+
+```
+python3 gui.py
+```
+A user interface will deploy and it will ask for you to type in a name
+
+The character list include 731 characters, a vast list, but does not include every character ever. If you want to know all the characters who are available, please see "heroList.py"
+
+2. Type in a character name that appears on the character list
+
+3. PowerStats should display next to an image of the character
+
+4. If an image is not available, the interface will say so
+
+
 ## Project Overview
 
 This is just a fun personal project to practice the uses of APIs and also get familiar with GUI projects. 
@@ -23,3 +57,17 @@ As stated earlier, I plan to use Azure DevOps platform to build and test the app
 * How to display the character image and stats in the GUI?
 
 * How do I iterate over the API response and display each power stat on the GUI.
+
+## How it works
+
+# The GUI
+
+The application now has a GUI icorporated. Directions on how to use are listed at the top. i enjoyed this project and using the GUI. This was my first time having a project with an interface. It presented some challenges such as:
+
+* incorporating the api script into the gui file and adding logic to add the data from the response to the gui
+
+* fethcing the name that was given in the entry box and feeding it to the "get_power_stats" function
+
+* displaying the image and the stats next to eachother, having to incorporate both the gird and pack functions so that the gui will format with the resizing of the window
+
+Overall this was a great project for me to test the use of interfaces with a backend. I plan on trying different GUI libraries out too in future projects
