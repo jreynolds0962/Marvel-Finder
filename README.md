@@ -23,15 +23,18 @@ If you want to run your program within the gui, you will have to run the gui.py 
 ```
 python3 gui.py
 ```
-A user interface will deploy and it will ask for you to type in a name
+    A user interface will deploy and it will ask for you to type in a name
 
-The character list include 731 characters, a vast list, but does not include every character ever. If you want to know all the characters who are available, please see "heroList.py"
+    The character list include 731 characters, a vast list, but does not include every character ever. If you want to know all the characters who are available, please see "heroList.py"
 
 2. Type in a character name that appears on the character list
 
 3. PowerStats should display next to an image of the character
 
 4. If an image is not available, the interface will say so
+
+
+![Screen Shot 2023-07-13 at 3 42 10 PM](https://github.com/jreynolds0962/PowerProfiler/assets/88413989/0fe16319-9040-44b8-b069-00ddae63d822)
 
 
 ## Project Overview
